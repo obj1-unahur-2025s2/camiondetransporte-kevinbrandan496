@@ -1,9 +1,20 @@
 import camion.*
+import cosas.*
 
-describe "group of test for camion" {
+describe "camion test" {
+method initialize(){//sirve para iniciar un metodo de una determinada forma
+camion.cargar(knightRider)
+camion.cargar(arena)
+arena.peso(200)
+ladrillos.cantidad(10)
+camion.cargar(ladrillos)
+}
+  test "el camion tiene un peso total de 1720" {
+    assert.equals(1720, camion.pesoTotal())
+  }
 
-  test "first test" {
-    assert.that(true)
+  test"puede circular el camion" {
+    assert.that(camion.puedeCircular(10))
   }
 
 }
